@@ -52,7 +52,7 @@ public class ItemCraftGem extends Item {
 	
 	public void check(EntityPlayer p){
 		//TODO: Fix null pointer (world related - Also get world server side!)
-		if(p.worldObj.getBlock(x, y, z).equals(null)){
+		if(mc.getEntityWorld().getBlock(x, y, z).equals(null)){
 			
 			p.worldObj.setBlock(x, y, z, Blocks.crafting_table);
 			

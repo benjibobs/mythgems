@@ -25,12 +25,14 @@ import cpw.mods.fml.server.FMLServerHandler;
 
 public class MythicGems {
 
+	//TODO: Comment code so it's easier to work with. Do this after current To Do list is done?
+	
 	public static final String modid = "bmythgems";
 	public static final String version = "1.0";
 	
 	private RepairGemEvents rge = RepairGemEvents.instance;
-	private Minecraft mc = Minecraft.getMinecraft();
 	
+	//TODO: Make this a list and iterate through to support multiple players.
 	public static EntityPlayer p;
 	
 	public static CreativeTabs tabMGems = new CreativeTabs("MythicGems") {
@@ -48,11 +50,9 @@ public class MythicGems {
 	public static Item flygem;
 	public static Item craftinggem;
 	
-	//public static Block tramp;
-	
 	public final MinecraftServer mcs = FMLServerHandler.instance().getServer();
 	
-	@Instance("bmythgems") //The instance, this is very important later on
+	@Instance("bmythgems") 
 	public static MythicGems instance = new MythicGems();
 	
 	@EventHandler

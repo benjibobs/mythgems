@@ -22,9 +22,9 @@ public class CommonEvents {
 	//TODO: Decide finalised tick timers
 	
 	@SubscribeEvent
-	public void repairGemTickHandler(TickEvent.WorldTickEvent event){
+	public void repairGemTickHandler(TickEvent.PlayerTickEvent event){
 	
-		if(cur <= 100){
+		if(cur <= 60){
 			cur++;
 		}else{
 			cur = 0;
@@ -34,8 +34,8 @@ public class CommonEvents {
 	}
 	
 	@SubscribeEvent
-	public void flightGemTickHandler(TickEvent.WorldTickEvent event){
-	
+	public void flightGemTickHandler(TickEvent.PlayerTickEvent event){
+		//TODO: Again. Properly implement. This is messy...
 		if(fcur <= 6000){
 			fcur++;
 		}else{
